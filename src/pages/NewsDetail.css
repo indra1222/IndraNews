@@ -1,0 +1,49 @@
+.news-detail-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Mengatur lebar maksimum kontainer */
+    margin: 20px auto; /* Pusatkan kontainer */
+    line-height: 1.6; /* Menambahkan jarak antar baris untuk keterbacaan */
+}
+
+.news-detail-container h1 {
+    font-size: 28px; /* Ukuran font yang lebih besar untuk judul */
+    margin-bottom: 15px; /* Menambah jarak bawah */
+    color: #333; /* Warna teks yang lebih gelap untuk kontras */
+}
+
+.news-detail-container p {
+    font-size: 18px; /* Ukuran font untuk teks biasa */
+    margin-bottom: 20px; /* Menambah jarak bawah */
+    color: #555; /* Warna teks yang lebih lembut */
+}
+
+.news-detail-container a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000000; /* Warna link */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: bold; /* Menebalkan teks link */
+}
+
+.news-detail-container a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+    color: #0b0b0b; /* Warna link saat hover */
+}
+
+/* Tambahan untuk responsivitas */
+@media (max-width: 600px) {
+    .news-detail-container {
+        padding: 15px; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .news-detail-container h1 {
+        font-size: 24px; /* Ukuran font lebih kecil untuk judul di layar kecil */
+    }
+
+    .news-detail-container p {
+        font-size: 16px; /* Ukuran font lebih kecil untuk teks di layar kecil */
+    }
+}

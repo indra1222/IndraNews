@@ -1,0 +1,65 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    position: fixed; /* Menjaga navbar tetap di bawah */
+    bottom: 0;
+    left: 0; /* Menjaga navbar sejajar dengan sisi kiri */
+    width: 100%; /* Memastikan lebar navbar 100% */
+    height: 60px; /* Tinggi navbar yang tetap */
+    background-color: #1c1f26; /* Warna latar belakang gelap */
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Mengatur isi navbar ke tengah vertikal */
+    z-index: 10;
+    border-top: 1px solid #333; /* Garis tipis di atas navbar */
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Memastikan menu menggunakan seluruh lebar navbar */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-icon {
+    font-size: 1.5rem; /* Ukuran font untuk ikon */
+    color: #bfc9d2; /* Warna font abu-abu */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.2rem 0; /* Memberi jarak di antara ikon */
+}
+
+.nav-icon:hover {
+    color: #2c3e75; /* Warna navy pada hover */
+    transform: translateY(-3px); /* Efek hover naik sedikit */
+}
+
+.logo {
+    font-size: 1.5rem; /* Ukuran font untuk logo */
+    font-weight: bold; /* Menebalkan teks */
+    color: #ffffff; /* Warna logo */
+    text-decoration: none;
+    font-family: 'Georgia', serif; /* Gaya font untuk logo */
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; /* Memberi jarak antara ikon dan teks */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.logo:hover {
+    color: #2c3e75; /* Warna navy pada hover */
+    transform: scale(1.1); /* Pembesaran sedikit pada hover */
+}
+
+/* Responsivitas untuk perangkat mobile */
+@media (max-width: 768px) {
+    .nav-icon {
+        font-size: 1.2rem; /* Ukuran ikon lebih kecil untuk perangkat mobile */
+    }
+}
