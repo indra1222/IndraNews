@@ -1,69 +1,61 @@
-/* src/App.css */
-
-/* Reset dasar untuk konsistensi tampilan di berbagai browser */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Splash screen styling */
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #001f3f; /* Warna latar belakang splash screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Memastikan splash screen berada di atas elemen lainnya */
+  animation: fadeIn 0.5s ease-in-out; /* Animasi muncul halus */
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #ecf0f1;
-  color: #333;
+.splash-image {
+  width: 300px; /* Ukuran gambar splash */
+  height: auto;
+  object-fit: contain;
+  animation: popIn 1.5s ease-in-out; /* Animasi gambar */
 }
 
-/* Gaya umum untuk container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-/* Gaya untuk loading dan error message */
-.loading, .error {
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.2rem;
-  color: #e74c3c; /* Warna merah untuk error */
-}
-
-/* Link gaya default */
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Gaya tombol (jika ada) */
-button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-
-/* Media Query untuk responsif di perangkat kecil */
-@media (max-width: 768px) {
-  body {
-      padding: 0 1rem;
+/* Fade-in animasi untuk splash screen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  .container {
-      padding: 0;
+  to {
+    opacity: 1;
   }
 }
-.main-content {
-  padding-bottom: 60px; /* Tinggi navbar ditambah sedikit ruang */
+
+/* Animasi pop-in untuk gambar */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tambahkan gaya saat splash screen hilang (opsional) */
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
